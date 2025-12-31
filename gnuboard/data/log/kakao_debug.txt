@@ -1,0 +1,140 @@
+[2025-12-24 15:06:16] === 카카오 콜백 시작 ===
+[2025-12-24 15:06:16] GET 파라미터: Array
+(
+    [code] => ScLOe5opCtGowibpT_49P3Y2ZUaj78-JdnkkVRNeMjYWW-5ldU-LeQAAAAQKDSAbAAABm073HzeGtS2__sNdBQ
+)
+
+[2025-12-24 15:06:16] 인증 코드: ScLOe5opCtGowibpT_49...
+[2025-12-24 15:06:17] 토큰 요청 HTTP 코드: 200
+[2025-12-24 15:06:17] 토큰 응답: {"access_token":"E0KGcx8kRrsZzaao9g8gyuT0XZeEOkfrAAAAAQoXFO4AAAGbTvcf8rbGP5Eb7W-4","token_type":"bearer","refresh_token":"zD4tfF4ESrLTG1LtHJc-1iykAChYISHHAAAAAgoXFO4AAAGbTvcf7LbGP5Eb7W-4","expires_in":21599,"scope":"account_email profile_image profile_nickname","refresh_token_expires_in":5183999}
+[2025-12-24 15:06:17] 액세스 토큰 발급 성공
+[2025-12-24 15:06:17] 사용자 정보 HTTP 코드: 200
+[2025-12-24 15:06:17] 사용자 정보: {"id":4659578743,"connected_at":"2025-12-24T06:01:47Z","properties":{"nickname":"이채윤","profile_image":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_640x640.jpg","thumbnail_image":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_110x110.jpg"},"kakao_account":{"profile_nickname_needs_agreement":false,"profile_image_needs_agreement":false,"profile":{"nickname":"이채윤","thumbnail_image_url":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_110x110.jpg","profile_image_url":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_640x640.jpg","is_default_image":false,"is_default_nickname":false},"has_email":true,"email_needs_agreement":false,"is_email_valid":true,"is_email_verified":true,"email":"gkxmdnld1@naver.com"}}
+[2025-12-24 15:06:17] 카카오 ID: kakao_4659578743
+[2025-12-24 15:06:17] 기존 회원 로그인 시작
+[2025-12-24 15:06:17] 로그인 성공 - 세션 설정 완료
+[2025-12-24 15:07:34] === 카카오 콜백 시작 ===
+[2025-12-24 15:07:34] GET 파라미터: Array
+(
+    [code] => aHGlkug7wNcthpNUDS4cS07hzHSXukw8F-FnIkmpphyracUl41_QNwAAAAQKFwEPAAABm074T3f7Ewsnpgvovw
+)
+
+[2025-12-24 15:07:34] 인증 코드: aHGlkug7wNcthpNUDS4c...
+[2025-12-24 15:07:34] 토큰 요청 HTTP 코드: 200
+[2025-12-24 15:07:34] 토큰 응답: {"access_token":"86SpILbATeK5kHjmdvk6v4aB2Fkbz2-GAAAAAQoXC2sAAAGbTvhP_bbGP5Eb7W-4","token_type":"bearer","refresh_token":"2eJX6P0JLCLhazx2wgQ0P2QJPhPEgXCuAAAAAgoXC2sAAAGbTvhP97bGP5Eb7W-4","expires_in":21599,"scope":"account_email profile_image profile_nickname","refresh_token_expires_in":5183999}
+[2025-12-24 15:07:34] 액세스 토큰 발급 성공
+[2025-12-24 15:07:35] 사용자 정보 HTTP 코드: 200
+[2025-12-24 15:07:35] 사용자 정보: {"id":4659578743,"connected_at":"2025-12-24T06:01:47Z","properties":{"nickname":"이채윤","profile_image":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_640x640.jpg","thumbnail_image":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_110x110.jpg"},"kakao_account":{"profile_nickname_needs_agreement":false,"profile_image_needs_agreement":false,"profile":{"nickname":"이채윤","thumbnail_image_url":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_110x110.jpg","profile_image_url":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_640x640.jpg","is_default_image":false,"is_default_nickname":false},"has_email":true,"email_needs_agreement":false,"is_email_valid":true,"is_email_verified":true,"email":"gkxmdnld1@naver.com"}}
+[2025-12-24 15:07:35] 카카오 ID: kakao_4659578743
+[2025-12-24 15:07:35] 기존 회원 로그인 시작
+[2025-12-24 15:07:35] 로그인 성공 - 세션 설정 완료
+[2025-12-24 15:07:47] === 카카오 콜백 시작 ===
+[2025-12-24 15:07:47] GET 파라미터: Array
+(
+    [code] => CxFZ8hOc7qaaedFMEzPoygagKQoWAkkF6fn6kiFKBqLyN9phDtP1SQAAAAQKFxDvAAABm074gGptZc76WqiBKA
+)
+
+[2025-12-24 15:07:47] 인증 코드: CxFZ8hOc7qaaedFMEzPo...
+[2025-12-24 15:07:47] 토큰 요청 HTTP 코드: 200
+[2025-12-24 15:07:47] 토큰 응답: {"access_token":"Ry-JFAzV469T76IBlNix9dRfRDpqrQXyAAAAAQoXNVcAAAGbTviAzrbGP5Eb7W-4","token_type":"bearer","refresh_token":"ttSrKhGhSJssTLiSh645k016GfSiAGK0AAAAAgoXNVcAAAGbTviAybbGP5Eb7W-4","expires_in":21599,"scope":"account_email profile_image profile_nickname","refresh_token_expires_in":5183999}
+[2025-12-24 15:07:47] 액세스 토큰 발급 성공
+[2025-12-24 15:07:47] 사용자 정보 HTTP 코드: 200
+[2025-12-24 15:07:47] 사용자 정보: {"id":4659578743,"connected_at":"2025-12-24T06:01:47Z","properties":{"nickname":"이채윤","profile_image":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_640x640.jpg","thumbnail_image":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_110x110.jpg"},"kakao_account":{"profile_nickname_needs_agreement":false,"profile_image_needs_agreement":false,"profile":{"nickname":"이채윤","thumbnail_image_url":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_110x110.jpg","profile_image_url":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_640x640.jpg","is_default_image":false,"is_default_nickname":false},"has_email":true,"email_needs_agreement":false,"is_email_valid":true,"is_email_verified":true,"email":"gkxmdnld1@naver.com"}}
+[2025-12-24 15:07:47] 카카오 ID: kakao_4659578743
+[2025-12-24 15:07:47] 기존 회원 로그인 시작
+[2025-12-24 15:07:47] 로그인 성공 - 세션 설정 완료
+[2025-12-24 15:09:17] === 카카오 콜백 시작 ===
+[2025-12-24 15:09:17] GET 파라미터: Array
+(
+    [code] => DIHQXk8WYYArnBtnWqcgid-AzHK0FSTvwVWdIv5RTYDtf3d37i2HrAAAAAQKFxZiAAABm0754kvDukuslKNZWg
+)
+
+[2025-12-24 15:09:17] 인증 코드: DIHQXk8WYYArnBtnWqcg...
+[2025-12-24 15:09:18] 토큰 요청 HTTP 코드: 200
+[2025-12-24 15:09:18] 토큰 응답: {"access_token":"wpQNyOoq4OI2cUGtwbWWqaX38tAXPMvaAAAAAQoXEO8AAAGbTvni2rbGP5Eb7W-4","token_type":"bearer","refresh_token":"0KKFwFwYx3C1r8i_FN9UOV_AcCSXP5exAAAAAgoXEO8AAAGbTvni1LbGP5Eb7W-4","expires_in":21599,"scope":"account_email profile_image profile_nickname","refresh_token_expires_in":5183999}
+[2025-12-24 15:09:18] 액세스 토큰 발급 성공
+[2025-12-24 15:09:18] 사용자 정보 HTTP 코드: 200
+[2025-12-24 15:09:18] 사용자 정보: {"id":4659578743,"connected_at":"2025-12-24T06:01:47Z","properties":{"nickname":"이채윤","profile_image":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_640x640.jpg","thumbnail_image":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_110x110.jpg"},"kakao_account":{"profile_nickname_needs_agreement":false,"profile_image_needs_agreement":false,"profile":{"nickname":"이채윤","thumbnail_image_url":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_110x110.jpg","profile_image_url":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_640x640.jpg","is_default_image":false,"is_default_nickname":false},"has_email":true,"email_needs_agreement":false,"is_email_valid":true,"is_email_verified":true,"email":"gkxmdnld1@naver.com"}}
+[2025-12-24 15:09:18] 카카오 ID: kakao_4659578743
+[2025-12-24 15:09:18] 기존 회원 로그인 시작
+[2025-12-24 15:09:18] 로그인 성공 - 세션 설정 완료
+[2025-12-24 15:11:53] === 카카오 콜백 시작 ===
+[2025-12-24 15:11:53] GET 파라미터: Array
+(
+    [code] => snvpvCQuxjjCRnKWELZlLhI_9ioFm47O3ldPPyDGoFexLjvV1DYjjAAAAAQKFwHPAAABm078QS-m1x-HnlkNwQ
+)
+
+[2025-12-24 15:11:53] 인증 코드: snvpvCQuxjjCRnKWELZl...
+[2025-12-24 15:11:53] 토큰 요청 HTTP 코드: 200
+[2025-12-24 15:11:53] 토큰 응답: {"access_token":"UEGiFhWh-n2EvTqx7Ge_IE1TXJvNOOz0AAAAAQoNFKMAAAGbTvxBp7bGP5Eb7W-4","token_type":"bearer","refresh_token":"_42q2rC3KkQ1XZxwhcLnhaIBL2MdEWW2AAAAAgoNFKMAAAGbTvxBpbbGP5Eb7W-4","expires_in":21599,"scope":"account_email profile_image profile_nickname","refresh_token_expires_in":5183999}
+[2025-12-24 15:11:53] 액세스 토큰 발급 성공
+[2025-12-24 15:11:53] 사용자 정보 HTTP 코드: 200
+[2025-12-24 15:11:53] 사용자 정보: {"id":4659578743,"connected_at":"2025-12-24T06:01:47Z","properties":{"nickname":"이채윤","profile_image":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_640x640.jpg","thumbnail_image":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_110x110.jpg"},"kakao_account":{"profile_nickname_needs_agreement":false,"profile_image_needs_agreement":false,"profile":{"nickname":"이채윤","thumbnail_image_url":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_110x110.jpg","profile_image_url":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_640x640.jpg","is_default_image":false,"is_default_nickname":false},"has_email":true,"email_needs_agreement":false,"is_email_valid":true,"is_email_verified":true,"email":"gkxmdnld1@naver.com"}}
+[2025-12-24 15:11:53] 카카오 ID: kakao_4659578743
+[2025-12-24 15:11:53] 기존 회원 로그인 시작
+[2025-12-24 15:11:53] 로그인 성공
+[2025-12-24 15:11:53] 세션 ss_mb_id: kakao_4659578743
+[2025-12-24 15:12:04] === 카카오 콜백 시작 ===
+[2025-12-24 15:12:04] GET 파라미터: Array
+(
+    [code] => oRLjNNopUE69fQ88f3mQm3D2bnK8aeiKBwhOyJP2OgzGFCyy2OX_PQAAAAQKFwHPAAABm078a6y37mS5Kc-sjw
+)
+
+[2025-12-24 15:12:04] 인증 코드: oRLjNNopUE69fQ88f3mQ...
+[2025-12-24 15:12:04] 토큰 요청 HTTP 코드: 200
+[2025-12-24 15:12:04] 토큰 응답: {"access_token":"kS5RK0aanYoiIsBpnswmKaxFcchF-S8jAAAAAQoXC2sAAAGbTvxsNbbGP5Eb7W-4","token_type":"bearer","refresh_token":"qqRIH6jVGA-zdWXayAqF0CEHcdsj4kGuAAAAAgoXC2sAAAGbTvxsMLbGP5Eb7W-4","expires_in":21599,"scope":"account_email profile_image profile_nickname","refresh_token_expires_in":5183999}
+[2025-12-24 15:12:04] 액세스 토큰 발급 성공
+[2025-12-24 15:12:04] 사용자 정보 HTTP 코드: 200
+[2025-12-24 15:12:04] 사용자 정보: {"id":4659578743,"connected_at":"2025-12-24T06:01:47Z","properties":{"nickname":"이채윤","profile_image":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_640x640.jpg","thumbnail_image":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_110x110.jpg"},"kakao_account":{"profile_nickname_needs_agreement":false,"profile_image_needs_agreement":false,"profile":{"nickname":"이채윤","thumbnail_image_url":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_110x110.jpg","profile_image_url":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_640x640.jpg","is_default_image":false,"is_default_nickname":false},"has_email":true,"email_needs_agreement":false,"is_email_valid":true,"is_email_verified":true,"email":"gkxmdnld1@naver.com"}}
+[2025-12-24 15:12:04] 카카오 ID: kakao_4659578743
+[2025-12-24 15:12:04] 기존 회원 로그인 시작
+[2025-12-24 15:12:04] 로그인 성공
+[2025-12-24 15:12:04] 세션 ss_mb_id: kakao_4659578743
+[2025-12-24 15:13:12] === 카카오 콜백 시작 ===
+[2025-12-24 15:13:12] GET 파라미터: Array
+(
+    [code] => 6t55b8PXegOHF3ieJn6zXTY5U7R017ZzN9Sc2tf02HAhbi-80qiwOQAAAAQKFxDvAAABm079dlwh5oEAb4_jFQ
+)
+
+[2025-12-24 15:13:12] 인증 코드: 6t55b8PXegOHF3ieJn6z...
+[2025-12-24 15:13:12] 토큰 요청 HTTP 코드: 200
+[2025-12-24 15:13:12] 토큰 응답: {"access_token":"g6gJ67F8gPp6Cbin9dwRgWPbKZMEhIoCAAAAAQoNIpkAAAGbTv12yLbGP5Eb7W-4","token_type":"bearer","refresh_token":"mFTy2jPndTQ7HkIF1g9gBJcGCy_gr3NcAAAAAgoNIpkAAAGbTv12xrbGP5Eb7W-4","expires_in":21599,"scope":"account_email profile_image profile_nickname","refresh_token_expires_in":5183999}
+[2025-12-24 15:13:12] 액세스 토큰 발급 성공
+[2025-12-24 15:13:12] 사용자 정보 HTTP 코드: 200
+[2025-12-24 15:13:12] 사용자 정보: {"id":4659578743,"connected_at":"2025-12-24T06:01:47Z","properties":{"nickname":"이채윤","profile_image":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_640x640.jpg","thumbnail_image":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_110x110.jpg"},"kakao_account":{"profile_nickname_needs_agreement":false,"profile_image_needs_agreement":false,"profile":{"nickname":"이채윤","thumbnail_image_url":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_110x110.jpg","profile_image_url":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_640x640.jpg","is_default_image":false,"is_default_nickname":false},"has_email":true,"email_needs_agreement":false,"is_email_valid":true,"is_email_verified":true,"email":"gkxmdnld1@naver.com"}}
+[2025-12-24 15:13:12] 카카오 ID: kakao_4659578743
+[2025-12-24 15:13:12] 기존 회원 로그인 시작
+[2025-12-24 15:13:12] 로그인 성공
+[2025-12-24 15:13:12] 세션 ss_mb_id: kakao_4659578743
+[2025-12-24 15:14:08] === 카카오 콜백 시작 ===
+[2025-12-24 15:14:08] GET 파라미터: Array
+(
+    [code] => bq2go97RTcdOEBqwELFZzLCfPevMk9QqDqs2zIlpzF2qLDqqRIl0zgAAAAQKFxJVAAABm07-UJpSGUcvaFb1Eg
+)
+
+[2025-12-24 15:14:08] 인증 코드: bq2go97RTcdOEBqwELFZ...
+[2025-12-24 15:14:08] 토큰 요청 HTTP 코드: 200
+[2025-12-24 15:14:08] 토큰 응답: {"access_token":"lKpYimaSHJEIhlusepoIRVI3CVK__q48AAAAAQoNFKMAAAGbTv5RDLbGP5Eb7W-4","token_type":"bearer","refresh_token":"fU4Fnm6OtoSlTnF2SuA3kLxh6TLibXqLAAAAAgoNFKMAAAGbTv5RCrbGP5Eb7W-4","expires_in":21599,"scope":"account_email profile_image profile_nickname","refresh_token_expires_in":5183999}
+[2025-12-24 15:14:08] 액세스 토큰 발급 성공
+[2025-12-24 15:14:08] 사용자 정보 HTTP 코드: 200
+[2025-12-24 15:14:08] 사용자 정보: {"id":4659578743,"connected_at":"2025-12-24T06:01:47Z","properties":{"nickname":"이채윤","profile_image":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_640x640.jpg","thumbnail_image":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_110x110.jpg"},"kakao_account":{"profile_nickname_needs_agreement":false,"profile_image_needs_agreement":false,"profile":{"nickname":"이채윤","thumbnail_image_url":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_110x110.jpg","profile_image_url":"http://k.kakaocdn.net/dn/bO1jLe/dJMb9953cy6/Uax1ymdkrNoUUCKafJB6z1/img_640x640.jpg","is_default_image":false,"is_default_nickname":false},"has_email":true,"email_needs_agreement":false,"is_email_valid":true,"is_email_verified":true,"email":"gkxmdnld1@naver.com"}}
+[2025-12-24 15:14:08] 카카오 ID: kakao_4659578743
+[2025-12-24 15:14:08] 기존 회원 로그인 시작
+[2025-12-24 15:14:08] 로그인 성공
+[2025-12-24 15:14:08] 세션 ss_mb_id: kakao_4659578743
+[2025-12-24 15:15:00] === 카카오 콜백 시작 ===
+[2025-12-24 15:15:00] 인증 코드 받음
+[2025-12-24 15:15:00] 토큰 요청 HTTP 코드: 200
+[2025-12-24 15:15:00] 액세스 토큰 발급 성공
+[2025-12-24 15:15:00] 카카오 ID: kakao_4659578743
+[2025-12-24 15:15:00] 기존 회원 로그인 시작
+[2025-12-24 15:15:00] 로그인 처리 완료 - 세션 ID: cab00qu8etdhn76lpor97lbsb9
+[2025-12-24 15:15:00] ss_mb_id: kakao_4659578743
+[2025-12-24 15:15:43] === 카카오 콜백 시작 ===
+[2025-12-24 15:15:43] 인증 코드 받음
+[2025-12-24 15:15:43] 토큰 요청 HTTP 코드: 200
+[2025-12-24 15:15:43] 액세스 토큰 발급 성공
+[2025-12-24 15:15:43] 카카오 ID: kakao_4659578743
+[2025-12-24 15:15:43] 기존 회원 로그인 시작
+[2025-12-24 15:15:43] 로그인 처리 완료 - 세션 ID: 39dlpu959m943ta9jsb4543cn4
+[2025-12-24 15:15:43] ss_mb_id: kakao_4659578743

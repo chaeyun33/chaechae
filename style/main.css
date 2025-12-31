@@ -1,0 +1,1058 @@
+@charset "utf-8";
+
+/* ===================================
+   기본 설정
+   =================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  color: #191919;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===================================
+   메인 히어로 슬라이드
+   =================================== */
+.imgslide {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.imgslide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.imgslide::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 80%;
+  height: 150%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 20s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-20px, -20px) rotate(5deg); }
+}
+
+.imgslide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 1.8s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(0.65) contrast(1.1) saturate(1.2);
+  transform: scale(1.1);
+}
+
+.imgslide img.active {
+  opacity: 1;
+  z-index: 1;
+  transform: scale(1);
+}
+
+/* 슬라이드 콘텐츠 */
+.imgslide .slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 3;
+  color: #fff;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.imgslide .slide-content .slide-title {
+  font-size: clamp(32px, 5vw, 72px);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 24px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.02em;
+  animation: fadeInUp 1s ease-out;
+  line-height: 1.3;
+}
+
+.imgslide .slide-content p {
+  font-size: clamp(16px, 2vw, 24px);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 40px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.imgslide .slide-btn {
+  display: inline-block;
+  padding: 18px 48px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fadeInUp 1s ease-out 0.4s both;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.imgslide .slide-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ===================================
+   MISSION 섹션
+   =================================== */
+.mission {
+  padding: 80px 60px;
+  background: #fff;
+  position: relative; 
+}
+
+.mission-container {
+  max-width: 1400px; 
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.mission-text h2 {
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 700;
+  color: #191919;
+  margin-bottom: 30px;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.mission-text p {
+  font-size: clamp(16px, 1.5vw, 20px);
+  font-weight: 400;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* 슬라이드 갤러리 */
+.mission-gallery {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-stack {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  height: 450px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.gallery-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+
+.card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
+  color: #fff;
+}
+
+.card-info h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #fff;
+}
+
+.card-info p {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+}
+/* 카드 네비게이션 */
+.card-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 100;
+}
+
+.card-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #e0e0e0;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-btn:hover {
+  border-color: #4285f4;
+  background: #4285f4;
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(66, 133, 244, 0.3);
+}
+
+.card-btn i {
+  font-size: 18px;
+  color: #191919;
+  transition: color 0.3s ease;
+  position: static;
+  float: none;
+  top: 0;
+  right: 0;
+}
+
+.card-btn:hover i {
+  color: #fff;
+  transform: none;
+}
+
+.card-counter {
+  font-size: 18px;
+  font-weight: 600;
+  color: #191919;
+  min-width: 60px;
+  text-align: center;
+}
+
+.card-counter .current {
+  color: #4285f4;
+  font-size: 24px;
+}
+.mission-slider {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;  /* 옆으로 넘길 때 카드가 밖으로 안 보이도록 */
+  transition: transform 0.4s ease; /* 부드러운 이동 */
+}
+
+/* 나머지 slide 카드 스타일, 버튼 스타일은 그대로 사용 */
+
+/* ===================================
+   공통 타이포그래피
+   =================================== */
+h2 {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 700;
+  color: #191919;
+  position: relative;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: clamp(18px, 2vw, 27px);
+  font-weight: 500;
+  color: #191919;
+  line-height: 1.3;
+}
+
+/* + 버튼 */
+i {
+  float: right;
+  position: relative;
+  top: 20px;
+  right: 0;
+  color: #191919;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+i:hover {
+  transform: translateX(4px) rotate(90deg);
+  color: #4285f4;
+}
+
+/* ===================================
+   공지사항 & 언론보도
+   =================================== */
+.art2 {
+  width: 100%;
+  padding: 80px 60px;
+  background-color: #fafafa;
+}
+
+.art2-grid {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+}
+
+.note {
+  flex: 1;
+  width: 50%;
+  padding: 0 60px 0 0;
+  box-shadow: none;
+}
+
+.note:nth-child(2) {
+  padding-right: 0;
+}
+
+.note h2 {
+  border-bottom: solid 2px #000;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.note h2::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #4285f4;
+  transition: width 0.4s ease;
+}
+
+.note:hover h2::after {
+  width: 60px;
+}
+
+.note ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.note li {
+  border-bottom: solid 1px #e0e0e0;
+  padding: 22px 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.note li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(66, 133, 244, 0.05), transparent);
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.note li:hover::before {
+  width: 100%;
+}
+
+.note li:hover {
+  padding-left: 12px;
+  border-left: 3px solid #4285f4;
+}
+
+.note li a {
+  text-decoration: none;
+  display: block;
+}
+
+.note li h3 {
+  color: #191919;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.note li:hover h3 {
+  color: #4285f4;
+  transform: translateX(4px);
+}
+
+.note li span {
+  font-size: 16px;
+  color: #999;
+  font-weight: 300;
+  display: block;
+  margin-top: 8px;
+}
+/* ================= 인스타그램 섹션 ================= */
+
+.insta-section {
+  width: 100%;
+  background: #fff;
+  padding: 80px 60px;
+}
+
+.insta-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.insta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.insta-header h2 {
+  font-size: clamp(28px, 4vw, 42px);
+}
+
+.insta-more {
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #ff8c00;
+  transition: all 0.3s ease;
+}
+
+.insta-more:hover {
+  transform: translateX(5px);
+  color: #ff6a00;
+}
+
+.news-layout {
+  padding: 100px 60px;
+  background: #ffffff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(30px, 4vw, 48px);
+  margin-bottom: 60px;
+}
+
+/* 그리드 틀 */
+.news-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+}
+
+/* 메인 카드 */
+.news-card.main {
+  grid-row: 1 / 3;
+}
+
+/* 공통 카드 */
+.news-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  display: block;
+  background: #000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+/* 이미지 */
+.news-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 4/2;
+  transition: 0.4s ease;
+}
+
+.news-card:hover img {
+  filter: brightness(0.7);
+}
+
+/* Instagram 스타일 오버레이 */
+.news-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 3;
+}
+
+.news-card:hover .news-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 좋아요/댓글 아이콘 */
+.news-content .instagram-actions {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.news-content .instagram-actions i {
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  float: none;
+  position: static;
+  top: 0;
+  right: 0;
+}
+
+.news-content .instagram-actions i:hover {
+  transform: scale(1.2);
+  color: #ed4956;
+}
+
+.news-content .instagram-actions .fa-bookmark:hover {
+  color: #ffc107;
+}
+
+/* 좋아요 수 */
+.news-content .likes {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* 게시물 내용 */
+.news-content .caption {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+/* 댓글 보기 */
+.news-content .view-comments {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 4px;
+}
+
+/* 시간 정보 */
+.news-content .time {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+/* 그리드 틀 */
+.news-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+}
+
+/* 메인 카드 */
+.news-card.main {
+  grid-row: 1 / 3;
+}
+
+/* 공통 카드 */
+.news-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  display: block;
+  background: #000;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* 이미지 */
+.news-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 4/2;  /* ← 원하는 비율로 변경 가능 */
+  transition: 0.5s ease;
+  filter: brightness(0.75);
+}
+
+.news-card:hover img {
+  transform: scale(1.05);
+}
+
+
+/* ===================================
+   지원기관
+   =================================== */
+aside {
+  width: 100%;
+  overflow: hidden;
+  background: #fafafa;
+  border-top: 1px solid #e5e5e5;
+  padding: 80px 0;
+  clear: both;
+}
+
+.organ {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding: 0 60px;
+}
+
+.organlist {
+  display: flex;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+}
+
+.organlist:hover {
+  animation-play-state: paused;
+}
+
+.slide {
+  display: flex;
+  gap: 40px;
+}
+
+.organbox {
+  width: 200px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.organbox:hover {
+  transform: translateY(-4px);
+}
+
+.organbox img {
+  width: 70%;
+  max-height: 50%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.4;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.organbox:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ===================================
+   반응형: 모바일 (800px 이하)
+   =================================== */
+@media (max-width: 800px) {
+.mission {
+    padding: 80px 20px;
+  }
+
+  /* 미션 컨테이너를 세로 배치로 변경 */
+  .mission-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* 텍스트 영역 */
+  .mission-text {
+    width: 100%;
+    padding: 0;
+  }
+
+  .mission-text h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .mission-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  /* 갤러리 영역 */
+  .mission-gallery {
+    width: 100%;
+    height: 450px;
+  }
+
+  .card-stack {
+    max-width: 100%;
+    height: 350px;
+    margin-bottom: 25px;
+  }
+
+  .gallery-card {
+    border-radius: 16px;
+  }
+
+  .card-info {
+    padding: 20px;
+  }
+
+  .card-info h4 {
+    font-size: 18px;
+  }
+
+  .card-info p {
+    font-size: 13px;
+  }
+
+  .card-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .card-btn i {
+    font-size: 15px;
+  }
+
+  .card-counter {
+    font-size: 16px;
+    min-width: 50px;
+  }
+
+  .card-counter .current {
+    font-size: 20px;
+  }
+
+  i {
+    font-size: 18px;
+    top: 10px;
+  }
+
+  .art2 {
+    padding: 60px 20px;
+  }
+
+  .art2-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .note {
+    width: 100%;
+    flex: none;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  .note:nth-child(2) {
+    padding-right: 0;
+  }
+
+  .note h2 {
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+  }
+
+  .note li {
+    padding: 18px 0;
+  }
+
+  /* Instagram 섹션 - 모바일 최적화 */
+  .news-layout {
+    padding: 60px 20px;
+  }
+
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  /* news-grid를 모바일용으로 재배치 */
+  .news-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 15px;
+  }
+
+  /* 메인 카드는 2열 차지 */
+  .news-card.main {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  /* 서브 카드들은 2열로 나란히 */
+  .news-card.sub {
+    grid-column: auto;
+  }
+
+  /* 모든 카드 크기 조정 */
+  .news-card {
+    width: 100%;
+  }
+
+  .news-card img {
+    aspect-ratio: 4/3;
+  }
+
+  /* Instagram 오버레이 모바일 최적화 */
+  .news-content {
+    padding: 16px;
+  }
+
+  .news-content .instagram-actions {
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .news-content .instagram-actions i {
+    font-size: 20px;
+  }
+
+  .news-content .likes {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+
+  .news-content .caption {
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+
+  .news-content .view-comments {
+    font-size: 11px;
+    margin-bottom: 3px;
+  }
+
+  .news-content .time {
+    font-size: 10px;
+  }
+
+  /* 지원기관 */
+  aside {
+    padding: 60px 0;
+  }
+
+  .organ {
+    padding: 0 20px;
+  }
+
+  .organbox {
+    width: 140px;
+    height: 60px;
+  }
+
+  .slide {
+    gap: 30px;
+  }
+  /* Instagram 섹션 - 수정 */
+  .news-layout {
+    padding: 60px 20px;
+  }
+
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  /* news-grid를 모바일용으로 재배치 */
+  .news-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 15px;
+  }
+
+  /* 메인 카드는 2열 차지 */
+  .news-card.main {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  /* 서브 카드들은 2열로 나란히 */
+  .news-card.sub {
+    grid-column: auto;
+  }
+
+  /* 모든 카드 크기 조정 */
+  .news-card {
+    width: 100%;
+  }
+
+  .news-card img {
+    aspect-ratio: 4/3;
+  }
+
+  /* 기존 코드 계속... */
+  i {
+    font-size: 18px;
+    top: 10px;
+  }
+
+  .art2 {
+    padding: 60px 20px;
+  }
+
+  
+}
+        /* 메인페이지는 padding-top 제거 */
+        body.main-page {
+            padding-top: 0 !important;
+        }
+        
+        /* 메인페이지가 아닐 때만 padding-top */
+        body:not(.main-page) {
+            padding-top: 90px;
+        }
+        
+        /* 메인페이지 첫 섹션을 헤더 아래로 */
+        body.main-page .imgslide {
+            margin-top: 0;
+            padding-top: 0;
+        }
+        
+        /* 메인페이지 투명 헤더 - 최상위 우선순위 */
+        body.main-page header {
+            background-color: transparent !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        body.main-page header.scrolled {
+            background-color: rgba(255,255,255,0.98) !important;
+            background: rgba(255,255,255,0.98) !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+            backdrop-filter: blur(10px);
+        }
+        
+        body.main-page header .navi > li > a {
+            color: #fff !important;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5) !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        body.main-page header.scrolled .navi > li > a {
+            color: #333 !important;
+            text-shadow: none !important;
+        }
+        
+        body.main-page header .logo img {
+            transition: all 0.3s ease !important;
+        }
+        
+        @media (max-width: 800px) {
+            body.main-page {
+                padding-top: 90px !important;
+            }
+            
+            body.main-page header {
+                background: #fff !important;
+                box-shadow: 0px 1px 5px -2px #ccc !important;
+            }
+            body.main-page header .navi > li > a {
+                color: #333 !important;
+                text-shadow: none !important;
+            }
+        }

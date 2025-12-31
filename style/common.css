@@ -1,0 +1,234 @@
+/* 전체 요소에 폰트 적용 */
+* {
+    margin: 0;
+    padding: 0; 
+    list-style: none; 
+    text-decoration: none; 
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 90px;
+}
+
+#wrap {
+    max-width: 100vw; 
+    overflow: hidden;
+    min-height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* 헤더 */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: #fff;
+    box-shadow: 0px 1px 5px -2px #ccc;
+    z-index: 1000;
+}
+
+/* ✅ 헤더 메뉴 구조 최종 안정화 */
+.menu {
+    max-width: 1400px;
+    width: 100%;
+    height: 90px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ✅ 로고 왼쪽 고정 */
+.logo {
+    width: 180px;
+    flex-shrink: 0;
+}
+
+/* ✅ 메뉴 정확히 중앙 유지 */
+.navi {
+    display: flex;
+    gap: 60px;
+}
+
+/* ✅ 메뉴 글자 */
+.navi > li {
+    font-size: 22px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* ✅ 로그인 영역 오른쪽 고정 */
+.login-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ✅ 로그인 버튼 */
+.user-name {
+    font-size: 14px;
+    color: #333;
+}
+
+.login-btn {
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: #333;
+    color: #fff !important;
+}
+
+.logout-btn {
+    background: #b30000;
+}
+
+
+
+/* 화면 크기별 대응 */
+@media screen and (max-width: 1260px) {
+    .navi>li {
+        padding: 0 30px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .navi>li {
+        padding: 0 20px;
+        font-size: 18px;
+    }
+}
+
+/* 푸터 */
+footer {
+    width: 100%; 
+    height: 220px; 
+    background-color: #444; 
+    overflow: hidden;
+    margin-top: auto;
+}
+
+.bt {
+    max-width: 1400px; 
+    width: 100%;
+    margin: 60px auto 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.bt img {
+    float: left;
+    margin-top: 20px;
+}
+
+.cp {
+    max-width: 1000px;
+    width: 80%;
+    float: left;
+    color: #ffffff;
+    margin-top: 10px; margin-left: 30px;
+    padding: 0;
+    margin-bottom: 5px;
+}
+.imfor {
+    float: left;
+    color: #fff;
+    font-weight: 200;
+    margin-top: 10px; margin-left: 30px;
+    width: auto;
+}
+
+.cp a {
+    color: #ffffff;
+}
+
+.cp li {
+    float: left; 
+    margin-right: 15px; 
+    font-size: 17px;
+}
+/* =========================
+   ✅ 회원가입 심플 블랙톤
+========================= */
+
+.register-custom-wrap {
+  max-width: 420px;
+  margin: 140px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.register-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #111;
+}
+
+.register-box .form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.register-box label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #222;
+}
+
+.register-box input {
+  height: 46px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 0 12px;
+  font-size: 15px;
+  background: #fafafa;
+}
+
+.register-box input:focus {
+  border-color: #111;
+  outline: none;
+  background: #fff;
+}
+
+.btn_confirm {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn_confirm .btn_submit {
+  width: 100%;
+  height: 52px;
+  border-radius: 10px;
+  background: #111;
+  color: #fff;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn_confirm .btn_submit:hover {
+  background: #000;
+}
+
+.btn_confirm .btn_close {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #777;
+}

@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+/* 공통 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'NexonLv2Gothic', 'Malgun Gothic', sans-serif;
+}
+
+/* 페이징 스타일 */
+.pg_wrap {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.pg {
+  display: inline-block;
+}
+
+.pg a,
+.pg strong {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 0 3px;
+  border: 1px solid #ddd;
+  color: #333;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.pg strong {
+  background: #2559a8;
+  color: #fff;
+  border-color: #2559a8;
+}
+
+.pg a:hover {
+  background: #f5f5f5;
+}
+
+/* 필수 표시 */
+.required {
+  color: #f00;
+  margin-left: 3px;
+}
+
+/* 반응형 */
+@media screen and (max-width: 800px) {
+  .pg a,
+  .pg strong {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
